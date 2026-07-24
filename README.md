@@ -33,6 +33,7 @@ src/
 - `docs/permissions.md`: base conceitual para permissões futuras.
 - `docs/roadmap.md`: próximos passos recomendados.
 - `docs/authentication-flow.md`: fluxo de autenticação mock e caminho para Supabase.
+- `docs/design-system.md`: biblioteca oficial de componentes e UI Playground.
 
 ## Scripts
 

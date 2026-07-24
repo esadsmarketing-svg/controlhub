@@ -1,0 +1,2 @@
+type Step = { label: string; description?: string };
+export function Steps({ current = 0, steps }: { current?: number; steps: Step[] }) { return <ol className="space-y-3">{steps.map((step, index) => <li className="flex gap-3" key={step.label}><span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground">{index + 1}</span><div><p className="text-sm font-medium">{step.label}</p>{step.description ? <p className="text-xs text-muted-foreground">{step.description}</p> : null}</div></li>)}</ol>; }

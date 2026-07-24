@@ -9,6 +9,7 @@ import { AppLayout } from '@/layouts/AppLayout';
 import { AccessDeniedPage } from '@/pages/AccessDeniedPage';
 import { AuthenticatedHomePage } from '@/pages/AuthenticatedHomePage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
+import { UiPlaygroundPage } from '@/features/dev/ui-playground';
 
 export function AppRoutes() {
   return (
@@ -24,6 +25,9 @@ export function AppRoutes() {
         <Route element={<AppLayout />}>
           <Route index element={<AuthenticatedHomePage />} />
           <Route path="access-denied" element={<AccessDeniedPage />} />
+          {import.meta.env.DEV ? (
+            <Route path="dev/ui" element={<UiPlaygroundPage />} />
+          ) : null}
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Route>

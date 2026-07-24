@@ -1,0 +1,2 @@
+type BreadcrumbItem = { label: string; href?: string };
+export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) { return <nav aria-label="Breadcrumb"><ol className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">{items.map((item, index) => <li className="flex items-center gap-2" key={item.label}>{index > 0 ? <span>/</span> : null}{item.href ? <a className="hover:text-foreground" href={item.href}>{item.label}</a> : <span className="text-foreground">{item.label}</span>}</li>)}</ol></nav>; }
