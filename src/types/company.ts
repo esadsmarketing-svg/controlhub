@@ -4,6 +4,7 @@ export type WorkspaceId = string;
 export type CompanyRef = {
   id: CompanyId;
   name: string;
+  tradeName?: string;
 };
 
 export type WorkspaceRef = {

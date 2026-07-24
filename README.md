@@ -32,6 +32,7 @@ src/
 - `docs/coding-standards.md`: convenções de código, imports e exports.
 - `docs/permissions.md`: base conceitual para permissões futuras.
 - `docs/roadmap.md`: próximos passos recomendados.
+- `docs/authentication-flow.md`: fluxo de autenticação mock e caminho para Supabase.
 
 ## Scripts
 

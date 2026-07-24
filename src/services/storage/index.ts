@@ -1,2 +1,2 @@
-// Barrel reservado para adapters desta camada.
-export {};
+export * from './SessionStorageAdapter';
+export * from './StorageAdapter';

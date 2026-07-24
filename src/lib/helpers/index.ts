@@ -1,2 +1,1 @@
-// Barrel reservado para utilitários desta camada.
-export {};
+export * from './errors';

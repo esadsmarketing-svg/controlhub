@@ -1,2 +1,2 @@
-// Barrel público da feature. Exporte apenas contratos estáveis deste módulo.
-export {};
+export * from './services';
+export * from './types/auth.types';
