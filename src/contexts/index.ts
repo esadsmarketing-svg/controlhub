@@ -1,2 +1,4 @@
-// Contextos globais devem ser exportados a partir deste barrel.
-export {};
+export * from './AuthContext';
+export * from './CompanyContext';
+export * from './NotificationContext';
+export * from './ThemeContext';

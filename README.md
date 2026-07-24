@@ -9,37 +9,29 @@ ControlHub é a fundação de um SaaS moderno para gestão de pequenas e médias
 - Supabase Auth e PostgreSQL no Supabase
 - Deploy na Vercel
 
-## Arquitetura inicial
+## Arquitetura consolidada
 
-A estrutura foi organizada para crescer por módulos de negócio, mantendo separação de responsabilidades e baixo acoplamento.
+O projeto segue o padrão Feature First. Cada módulo de negócio possui estrutura própria para componentes, hooks, services, tipos, páginas e rotas, evitando acoplamento entre domínios.
 
 ```txt
 src/
-  app/          # composição da aplicação e providers globais
-  assets/       # arquivos estáticos locais
-  components/   # componentes reutilizáveis compartilhados
-  contexts/     # contextos globais reutilizáveis
-  features/     # módulos funcionais isolados por domínio
-  hooks/        # hooks compartilhados
-  layouts/      # layouts de rotas e shells de página
-  lib/          # integrações e helpers de bibliotecas
-  pages/        # páginas roteáveis leves
-  routes/       # configuração central de rotas
-  services/     # clients/adapters para APIs externas futuramente
-  styles/       # estilos globais e tokens base
-  types/        # tipos compartilhados
-  utils/        # funções utilitárias puras
+  app/          # composição raiz e providers globais
+  components/   # apenas componentes reutilizáveis globais
+  contexts/     # contextos globais preparados
+  features/     # módulos independentes por domínio
+  lib/          # config, constants, helpers, validators e integrações futuras
+  services/     # adapters externos futuros
+  types/        # contratos globais compartilhados
+  utils/        # funções puras compartilhadas
 ```
 
-## Padrões definidos
+## Documentação
 
-- `features/<module>` concentra evolução incremental de cada módulo.
-- `pages` deve orquestrar componentes e layouts, evitando regras de negócio.
-- `components/common` contém componentes reutilizáveis de aplicação.
-- `components/ui` fica reservado para componentes shadcn/ui.
-- `services` fica reservado para adapters de Supabase e APIs, sem conexão implementada nesta etapa.
-- `types` centraliza contratos compartilhados.
-- `utils/permissions.ts` define uma base mínima para autorização futura por módulo e ação.
+- `docs/architecture.md`: visão arquitetural e princípios.
+- `docs/folder-structure.md`: organização de diretórios e padrão Feature First.
+- `docs/coding-standards.md`: convenções de código, imports e exports.
+- `docs/permissions.md`: base conceitual para permissões futuras.
+- `docs/roadmap.md`: próximos passos recomendados.
 
 ## Scripts
 

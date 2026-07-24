@@ -1,2 +1,3 @@
-// Services compartilhados devem ser exportados a partir deste barrel.
+// Barrel público de services compartilhados.
+// Não importe implementações específicas diretamente em componentes.
 export {};

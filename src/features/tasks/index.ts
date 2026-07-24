@@ -1,2 +1,2 @@
-// Barrel reservado para a evolução incremental deste módulo.
+// Barrel público da feature. Exporte apenas contratos estáveis deste módulo.
 export {};
